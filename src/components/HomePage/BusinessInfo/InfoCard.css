@@ -1,0 +1,17 @@
+.info-container {
+  display:flex;
+  align-items:center;
+  padding: 25px 0px;
+  justify-content: space-evenly;
+  border-radius: 10px;
+}
+
+.info-bg-primary {
+  background-color: #1CC7C1;
+  color: white;
+}
+
+.info-bg-dark {
+  background-color: #3A4256;
+  color: white;
+}

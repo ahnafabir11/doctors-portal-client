@@ -1,0 +1,17 @@
+.Header {
+  background-image: url(../../../images/chair-bg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.Header::after {
+  z-index: -1;
+  height: 690px;
+  content: ' ';
+  position: absolute;
+  top: 0;
+  width: 30%;
+  right: 0;
+  background-color: #3A4256;
+}
