@@ -1,0 +1,11 @@
+.dashboard-link-text {
+  font-size: 20px;
+  color: #17a2b8;
+  padding: 10px 0;
+}
+
+.dashboard-link-text:hover {
+  color: #17a2b8;
+  text-decoration: none;
+  transform: translateX(5px);
+}

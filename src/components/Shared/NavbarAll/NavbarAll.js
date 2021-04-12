@@ -11,8 +11,8 @@ const NavbarAll = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
             <Link to="/" className="nav_link_text">Home</Link>
-            <Link to="/" className="nav_link_text">About</Link>
-            <Link to="/" className="nav_link_text">Dental Services</Link>
+            <Link to="/appointment" className="nav_link_text">Appointment</Link>
+            <Link to="/dashboard" className="nav_link_text">DashBoard</Link>
             <Link to="/" className="nav_link_text">Reviews</Link>
             <Link to="/" className="nav_link_text">Blog</Link>
             <Link to="/" className="nav_link_text">Contact Us</Link>

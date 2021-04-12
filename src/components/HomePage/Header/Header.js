@@ -1,6 +1,6 @@
 import './Header.css';
 import React from 'react';
-import Navbar from '../NavbarAll/NavbarAll';
+import Navbar from '../../Shared/NavbarAll/NavbarAll';
 import HeaderMain from '../HeaderMain/HeaderMain';
 import BusinessInfo from './../BusinessInfo/BusinessInfo';
 

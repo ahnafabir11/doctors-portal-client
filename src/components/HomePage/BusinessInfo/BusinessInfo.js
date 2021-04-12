@@ -28,7 +28,7 @@ const BusinessInfo = () => {
   return (
     <section className="container-fluid row w-75 mx-auto">
       {
-        infosData.map((info, idx)=> <InfoCard info={info} />)
+        infosData.map((info, idx)=> <InfoCard key={idx} info={info} />)
       }
     </section>
   )

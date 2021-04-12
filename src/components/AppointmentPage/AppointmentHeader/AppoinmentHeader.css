@@ -1,0 +1,6 @@
+.AppointmentHeader {
+  padding: 50px 0px;
+  background-image: url('../../../images/chair-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
