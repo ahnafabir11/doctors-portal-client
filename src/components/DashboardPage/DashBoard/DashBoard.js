@@ -24,7 +24,6 @@ const DashBoard = () => {
 
   useEffect(() => {
     const email = sessionStorage.getItem('email');
-    console.log(email)
     fetch(`http://localhost:5000/appointmentsByDate`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

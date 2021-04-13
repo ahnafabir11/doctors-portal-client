@@ -17,7 +17,7 @@ const OurDoctors = () => {
       <div className="d-flex justify-content-between align-items-center flex-warp">
         {
           doctors.map((doctor, idx)=> 
-            <div key={idx} className="card card-body m-3" style={{ minWidth: '300px', textAlign: 'center'}}>
+            <div key={idx} className="card card-body m-3" style={{ maxWidth: '300px', textAlign: 'center'}}>
               <img src={`data:image/png;base64,${doctor.image.img}`} alt="" style={{height: '300px'}}/>
               <h4 className="pt-4 mb-0">{doctor.name}</h4>
               <p>{doctor.email}</p>
