@@ -5,6 +5,7 @@ import { AiTwotoneHome } from "react-icons/ai";
 import { BsPeopleFill } from "react-icons/bs";
 import { MdDashboard } from "react-icons/md";
 import { BiClipboard } from "react-icons/bi";
+import { HiOutlineViewGridAdd } from "react-icons/hi";
 
 const SideBar = () => {
   return (
@@ -21,6 +22,9 @@ const SideBar = () => {
         </Link>
         <Link className="dashboard-link-text" to="/dashboard/appointments">
           <BiClipboard/> Appointments
+        </Link>
+        <Link className="dashboard-link-text" to="/dashboard/addDoctor">
+          <HiOutlineViewGridAdd /> Add Doctor
         </Link>
       </div>      
     </div>

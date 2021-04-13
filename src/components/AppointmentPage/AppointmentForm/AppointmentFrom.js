@@ -21,10 +21,10 @@ const AppointmentFrom = ({ modalIsOpen, closeModal, appointmentOn, date}) => {
     data.service = appointmentOn;
     data.date = date.toDateString();
     data.created = new Date().toDateString();
-
+    
     fetch(`http://localhost:5000/addAppointment`, { 
       method: 'POST',
-      headers: { 'Content-Type': 'application/json'},
+      headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(data)
     })
     .then(res => res.json())

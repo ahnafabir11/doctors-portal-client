@@ -6,7 +6,7 @@ import { UserContext } from './../../../App';
 const PrivateRoute = ({ children, ...rest }) => {
   const [loggedInUser] = useContext(UserContext);
   const isLoggedIn = () => {
-    const result = sessionStorage.getItem('loggedin');
+    const result = sessionStorage.getItem('email');
     return result;
   }
 

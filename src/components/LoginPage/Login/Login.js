@@ -37,7 +37,7 @@ const Login = () => {
       newUser['photoURL'] = providedData.photoURL;
       setUser(newUser);
       setLoggedInUser(newUser);
-      sessionStorage.setItem('loggedin', true);
+      sessionStorage.setItem('email', providedData.email);
       history.push(from);
     })
     .catch((error) => {
@@ -45,7 +45,6 @@ const Login = () => {
       const newUser = { ...user };
       newUser['errorMessage'] = errorMessage;
       setUser(newUser);
-      sessionStorage.setItem('loggedin', false);
     })
   }
 

@@ -6,6 +6,8 @@ import PrivateRoute from '../../LoginPage/PrivateRoute/PrivateRoute';
 import AllPatients from '../AllPatients/AllPatients';
 import { Switch } from 'react-router-dom';
 import AllAppointments from '../AllAppointments/AllAppointments';
+import AddDoctor from '../AddDoctor/AddDoctor';
+
 
 const containerStyle = {
   backgroundColor: '#F4FDFB',
@@ -21,10 +23,12 @@ const DashBoard = () => {
   }
 
   useEffect(() => {
+    const email = sessionStorage.getItem('email');
+    console.log(email)
     fetch(`http://localhost:5000/appointmentsByDate`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ date: selectedDate.toDateString() })
+      body: JSON.stringify({ date: selectedDate.toDateString(), email })
     })
       .then(res => res.json())
       .then(data => {
@@ -40,6 +44,7 @@ const DashBoard = () => {
         <div className="col-md-2 mb-5">
         <SideBar/>
         </div>
+
         <Switch>
           <PrivateRoute exact path="/dashboard">
             <div className="col-md-5 mb-5">
@@ -59,6 +64,9 @@ const DashBoard = () => {
           </PrivateRoute>
           <PrivateRoute exact path="/dashboard/appointments">
             <AllAppointments/>
+          </PrivateRoute>
+          <PrivateRoute exact path="/dashboard/addDoctor">
+            <AddDoctor />
           </PrivateRoute>
         </Switch>
       </div>
