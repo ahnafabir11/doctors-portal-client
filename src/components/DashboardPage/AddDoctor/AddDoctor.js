@@ -5,18 +5,18 @@ const AddDoctor = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [file, setFile] = useState(null);
 
-  const handleFileChange = (e)=> {
+  const handleFileChange = (e) => {
     const newImgUrl = e.target.files[0];
     setFile(newImgUrl);
   }
 
-  const onSubmit = (data)=> {
+  const onSubmit = (data) => {
     const formData = new FormData()
     formData.append('file', file);
     formData.append('name', data.name);
     formData.append('email', data.email);
-    
-    fetch(`http://localhost:5000/addADoctor`, {
+
+    fetch(`https://gentle-sierra-66530.herokuapp.com/addADoctor`, {
       method: 'POST',
       body: formData
     })

@@ -24,7 +24,7 @@ const DashBoard = () => {
 
   useEffect(() => {
     const email = sessionStorage.getItem('email');
-    fetch(`http://localhost:5000/appointmentsByDate`, {
+    fetch(`https://gentle-sierra-66530.herokuapp.com/appointmentsByDate`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ date: selectedDate.toDateString(), email })
@@ -35,13 +35,13 @@ const DashBoard = () => {
       })
 
   }, [selectedDate])
-  
+
 
   return (
     <section style={containerStyle} className="py-5">
       <div className="container-fluid row ">
         <div className="col-md-2 mb-5">
-        <SideBar/>
+          <SideBar />
         </div>
 
         <Switch>
@@ -57,12 +57,12 @@ const DashBoard = () => {
               <AppointmentByDate appointments={appointments} />
             </div>
           </PrivateRoute>
-          
+
           <PrivateRoute exact path="/dashboard/patients">
-            <AllPatients/>
+            <AllPatients />
           </PrivateRoute>
           <PrivateRoute exact path="/dashboard/appointments">
-            <AllAppointments/>
+            <AllAppointments />
           </PrivateRoute>
           <PrivateRoute exact path="/dashboard/addDoctor">
             <AddDoctor />

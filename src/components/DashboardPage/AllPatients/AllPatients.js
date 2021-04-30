@@ -5,18 +5,18 @@ import { useState } from 'react';
 const AllPatients = () => {
   const [patients, setPatients] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/appointments`)
-    .then(res=>res.json())
-    .then(data => {
-      setPatients(data);
-    })
+    fetch(`https://gentle-sierra-66530.herokuapp.com/appointments`)
+      .then(res => res.json())
+      .then(data => {
+        setPatients(data);
+      })
   }, [patients])
 
   return (
     <div className="col-md-9 offset-md-1">
       <h3 className="text-info pb-5">All Patients Details</h3>
       <div className="table-responsive">
-        <table style={{minWidth: '1000px'}} className="table">
+        <table style={{ minWidth: '1000px' }} className="table">
           <thead>
             <tr>
               <th>Name</th>
@@ -29,7 +29,7 @@ const AllPatients = () => {
           </thead>
           <tbody>
             {
-              patients.map((patient, idx)=>
+              patients.map((patient, idx) =>
                 <tr key={idx}>
                   <td>{patient.username}</td>
                   <td>{patient.age}</td>
